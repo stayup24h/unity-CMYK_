@@ -4,6 +4,7 @@ public class GameManager : Singleton<GameManager>
 {
     public GameSpace[] space = new GameSpace[19]; //게임판 생성
     
+    public BackendLogin backendLogin;
     void Start()
     {
         // 게임판 설정
