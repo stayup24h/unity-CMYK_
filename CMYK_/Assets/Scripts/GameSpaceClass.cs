@@ -1,25 +1,25 @@
 public class GameSpace
 {
-    public bool cyan;
-    public bool magenta;
-    public bool yellow;
-    public bool keyPlate;
+    public bool isActive;
+    public bool isCyan;
+    public bool isMagenta;
+    public bool isYellow;
+    public bool isKeyPlate;
     public int turn;
     public int x;
     public int y;
 
-    public GameSpace(int _x, int _y)
+    public GameSpace(bool _isActive)
     {
-        x = _x;
-        y = _y;
+        isActive = _isActive;
     }
 
     public void Reset()
     {
-        cyan = false;
-        magenta = false;
-        yellow = false;
-        keyPlate = false;
+        isCyan = false;
+        isMagenta = false;
+        isYellow = false;
+        isKeyPlate = false;
         turn = 0;
     }
 
