@@ -44,6 +44,7 @@ public class CameraController : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel") * mouseZoomSpeed;
         Camera.main.orthographicSize -= scroll;
         Camera.main.orthographicSize = Mathf.Max(Camera.main.orthographicSize, 0.1f);
+        Camera.main.orthographicSize = Mathf.Min(Camera.main.orthographicSize, 50f);
 
         //mobile에서 구동되는 부분
 #elif UNITY_ANDROID
@@ -78,6 +79,7 @@ public class CameraController : MonoBehaviour
             //카메라 크기 변경
             Camera.main.orthographicSize += touchZoomSpeed * deltaMagnitudeDiff;
             Camera.main.orthographicSize = Mathf.Max(Camera.main.orthographicSize, 0.1f);
+            Camera.main.orthographicSize = Mathf.Min(Camera.main.orthographicSize, 50f);
         }
 #endif
     }
