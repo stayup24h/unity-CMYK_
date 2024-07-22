@@ -13,9 +13,9 @@ public class FieldManager : MonoBehaviour
 
     void ShowTile()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i=0; i<5; i++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j=0; j<5; j++)
             {
                 tile[i, j] = Instantiate(tilePrefab, fieldMng);
                 tile[i, j].GetComponent<TileScript>().Set(i, j);

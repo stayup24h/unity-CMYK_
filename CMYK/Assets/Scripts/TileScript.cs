@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class TileScript : MonoBehaviour
 {
-    public bool isActive;
     public bool isCyan;
     public bool isMagenta;
     public bool isYellow;
@@ -22,6 +21,25 @@ public class TileScript : MonoBehaviour
         isYellow = false;
         isKeyPlate = false;
         turn = 0;
+
+        if(x==0)
+        {
+            if(y!=2)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        else if(x==1)
+        {
+            if(y==0)
+            {
+                Destroy(this.gameObject);
+            }
+            else if(y==4)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     void Update()
